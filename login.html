@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login & Register</title>
+		<link rel="stylesheet" href="style1.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<input type="radio" id="login" name="toggle" checked />
+			<input type="radio" id="register" name="toggle" />
+
+			<div class="toggle-btns">
+				<label for="login">Login</label>
+				<label for="register">Register</label>
+			</div>
+
+			<form class="form login-form">
+				<h2>Welcome Back</h2>
+				<input type="email" placeholder="Email" required />
+				<input type="password" placeholder="Password" required />
+				<button type="submit">Login</button>
+				<p>
+					Don't have an account? <label for="register">Register here</label>
+				</p>
+			</form>
+
+			<form class="form register-form">
+				<h2>Create Account</h2>
+				<input type="text" placeholder="Username" required />
+				<input type="email" placeholder="Email" required />
+				<input type="password" placeholder="Password" required />
+				<button type="submit">Register</button>
+				<p>Already have an account? <label for="login">Login here</label></p>
+			</form>
+		</div>
+	</body>
+</html>

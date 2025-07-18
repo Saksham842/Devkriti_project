@@ -1,0 +1,134 @@
+/* Reset and base styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: radial-gradient(circle at center, #0d0d0d, #000);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+/* Form container */
+.wrapper {
+	width: 100%;
+	max-width: 400px;
+	background: #111;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 0 15px #00f7ff44;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+	display: none;
+}
+
+/* Toggle buttons (login/register switch) */
+.toggle-btns {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.toggle-btns label {
+	cursor: pointer;
+	padding: 10px 20px;
+	color: #ccc;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+
+#login:checked ~ .toggle-btns label[for="login"],
+#register:checked ~ .toggle-btns label[for="register"] {
+	color: #00f7ff;
+	border-bottom: 2px solid #00f7ff;
+}
+
+/* Form display logic */
+.form {
+	display: none;
+	flex-direction: column;
+}
+
+#login:checked ~ .login-form {
+	display: flex;
+}
+
+#register:checked ~ .register-form {
+	display: flex;
+}
+
+/* Form styling */
+.form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #00f7ff;
+}
+
+.form input {
+	padding: 12px;
+	margin-bottom: 15px;
+	border: none;
+	border-radius: 8px;
+	background: #1a1a1a;
+	color: #fff;
+	box-shadow: 0 0 5px #00f7ff33;
+	transition: box-shadow 0.3s ease;
+}
+
+.form input:focus {
+	outline: none;
+	box-shadow: 0 0 8px #00f7ff, 0 0 15px #00f7ff66;
+}
+
+.form button {
+	padding: 12px;
+	background: transparent;
+	color: #00f7ff;
+	border: 2px solid #00f7ff;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.form button:hover {
+	background: #00f7ff;
+	color: #000;
+	box-shadow: 0 0 12px #00f7ff;
+}
+
+.form p {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 0.9em;
+	color: #bbb;
+}
+
+.form p label {
+	color: #00f7ff;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 450px) {
+	.wrapper {
+		padding: 20px;
+	}
+	.toggle-btns {
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
+}
